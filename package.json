@@ -1,0 +1,25 @@
+{
+  "name": "spotify-clone-api-project",
+  "version": "1.0.0",
+  "description": "A RESTful API for a music streaming platform similar to Spotify, built with Express, MongoDB, JWT, and Cloudinary.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "Haitam Jebari",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cloudinary": "^2.9.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-async-handler": "^1.2.0",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.1.4",
+    "multer": "^2.0.2",
+    "nodemon": "^3.1.11"
+  }
+}
