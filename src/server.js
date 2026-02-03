@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors")
 const dotenv = require("dotenv");
 const userRouter  = require("./routes/userRouter");
 const { StatusCodes } = require("http-status-codes");
@@ -19,12 +20,22 @@ mongoose
     console.log(e.messsage);
   });
 
+app.use(cors());
 app.use(express.json())
 app.use("/users", userRouter)  
 app.use("/artists", artistRouter)  
 app.use("/albums", albumRouter)  
 app.use("/songs", songRouter)  
 app.use("/playlists", playlistRouter)  
+
+app.get("/api/test", (req, res) => {
+  res.json({
+    success: true,
+    message: "Frontend ↔ Backend connected 🎉",
+    time: new Date().toISOString(),
+  });
+});
+
 
 // //Error Handling middleware
 // //404
