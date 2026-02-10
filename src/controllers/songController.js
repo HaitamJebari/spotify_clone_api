@@ -141,7 +141,7 @@ const getSongs = asyncHandler(async (req, res) => {
   res.status(StatusCodes.OK).json({
     songs,
     page: parseInt(page),
-    pages: Math.cell(count / parseInt(limit)),
+    pages: Math.ceil(count / parseInt(limit)),
     totalSongs: count
   });
 

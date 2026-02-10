@@ -17,7 +17,7 @@ mongoose
     console.log("Mongodb Connected ...");
   })
   .catch((e) => {
-    console.log(e.messsage);
+    console.log(e);
   });
 
 app.use(cors());
@@ -27,6 +27,8 @@ app.use("/artists", artistRouter)
 app.use("/albums", albumRouter)  
 app.use("/songs", songRouter)  
 app.use("/playlists", playlistRouter)  
+
+
 
 app.get("/api/test", (req, res) => {
   res.json({
