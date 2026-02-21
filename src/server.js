@@ -10,6 +10,8 @@ const songRouter = require("./routes/songRouter");
 const playlistRouter = require("./routes/playlistRouter");
 dotenv.config();
 const app = express();
+const passport = require("./config/passport");
+
 
 mongoose
   .connect(process.env.MONGODB_URL)
@@ -22,6 +24,11 @@ mongoose
 
 app.use(cors());
 app.use(express.json())
+app.use(passport.initialize());
+
+app.use("/auth", require("./routes/oauth"));
+
+
 app.use("/users", userRouter)  
 app.use("/artists", artistRouter)  
 app.use("/albums", albumRouter)  

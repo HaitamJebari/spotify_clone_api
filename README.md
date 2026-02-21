@@ -70,7 +70,7 @@ npm install
 
 Create a .env file in the root directory:
 
-PORT=5000
+PORT=3000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 CLOUDINARY_CLOUD_NAME=your_cloud_name
