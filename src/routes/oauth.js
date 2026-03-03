@@ -17,7 +17,7 @@ router.get(
     const token = jwt.sign(
       { id: req.user._id },
       process.env.JWT,
-      { expiresIn: "30d" }
+      { expiresIn: "1d" }
     );
 
     res.redirect(

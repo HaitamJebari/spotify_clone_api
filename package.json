@@ -4,7 +4,7 @@
   "description": "A RESTful API for a music streaming platform similar to Spotify, built with Express, MongoDB, JWT, and Cloudinary.",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "Haitam Jebari",
